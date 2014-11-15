@@ -1,0 +1,69 @@
+<h1>Listing subscribes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Preference</th>
+      <th>Zip</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Lunch day</th>
+      <th>Lunch time</th>
+      <th>Dinner day</th>
+      <th>Dinner time</th>
+      <th>Extra note</th>
+      <th>First name</th>
+      <th>Street address</th>
+      <th>Apt</th>
+      <th>City</th>
+      <th>Newyork</th>
+      <th>Zip</th>
+      <th>Phone delivery</th>
+      <th>Email delivery</th>
+      <th>Paypal</th>
+      <th>Foodgembox price</th>
+      <th>Tax price</th>
+      <th>Tip price</th>
+      <th>Total price</th>
+      <th>Coupun code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subscribes.each do |subscribe| %>
+      <tr>
+        <td><%= subscribe.preference %></td>
+        <td><%= subscribe.zip %></td>
+        <td><%= subscribe.email %></td>
+        <td><%= subscribe.phone %></td>
+        <td><%= subscribe.lunch_day %></td>
+        <td><%= subscribe.lunch_time %></td>
+        <td><%= subscribe.dinner_day %></td>
+        <td><%= subscribe.dinner_time %></td>
+        <td><%= subscribe.extra_note %></td>
+        <td><%= subscribe.first_name %></td>
+        <td><%= subscribe.street_address %></td>
+        <td><%= subscribe.apt %></td>
+        <td><%= subscribe.city %></td>
+        <td><%= subscribe.newyork %></td>
+        <td><%= subscribe.zip %></td>
+        <td><%= subscribe.phone_delivery %></td>
+        <td><%= subscribe.email_delivery %></td>
+        <td><%= subscribe.paypal %></td>
+        <td><%= subscribe.foodgembox_price %></td>
+        <td><%= subscribe.tax_price %></td>
+        <td><%= subscribe.tip_price %></td>
+        <td><%= subscribe.total_price %></td>
+        <td><%= subscribe.coupun_code %></td>
+        <td><%= link_to 'Show', subscribe %></td>
+        <td><%= link_to 'Edit', edit_subscribe_path(subscribe) %></td>
+        <td><%= link_to 'Destroy', subscribe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subscribe', new_subscribe_path %>

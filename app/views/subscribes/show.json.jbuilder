@@ -1,0 +1,1 @@
+json.extract! @subscribe, :id, :preference, :zip, :email, :phone, :lunch_day, :lunch_time, :dinner_day, :dinner_time, :extra_note, :first_name, :street_address, :apt, :city, :newyork, :zip, :phone_delivery, :email_delivery, :paypal, :foodgembox_price, :tax_price, :tip_price, :total_price, :coupun_code, :created_at, :updated_at

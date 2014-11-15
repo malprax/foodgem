@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
 
 
+  resources :subscribes
+
   get 'management', to: redirect('management/subscription')
   get 'management/subscription'
 

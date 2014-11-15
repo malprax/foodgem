@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  preference: MyString
+  zip: MyString
+  email: MyString
+  phone: MyString
+  lunch_day: MyString
+  lunch_time: MyString
+  dinner_day: MyString
+  dinner_time: MyString
+  extra_note: MyString
+  first_name: MyString
+  street_address: MyString
+  apt: MyString
+  city: MyString
+  newyork: MyString
+  zip: MyString
+  phone_delivery: MyString
+  email_delivery: MyString
+  paypal: MyString
+  foodgembox_price: MyString
+  tax_price: MyString
+  tip_price: MyString
+  total_price: MyString
+  coupun_code: MyString
+
+two:
+  preference: MyString
+  zip: MyString
+  email: MyString
+  phone: MyString
+  lunch_day: MyString
+  lunch_time: MyString
+  dinner_day: MyString
+  dinner_time: MyString
+  extra_note: MyString
+  first_name: MyString
+  street_address: MyString
+  apt: MyString
+  city: MyString
+  newyork: MyString
+  zip: MyString
+  phone_delivery: MyString
+  email_delivery: MyString
+  paypal: MyString
+  foodgembox_price: MyString
+  tax_price: MyString
+  tip_price: MyString
+  total_price: MyString
+  coupun_code: MyString

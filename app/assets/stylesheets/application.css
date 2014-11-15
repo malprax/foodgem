@@ -1,0 +1,75 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require bootstrap_and_overrides
+ 
+ *= require rails_bootstrap_forms
+ *= require font-awesome
+ *= require_self
+ *= require_tree
+ */
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+margin-left: -15px;
+}
+
+.navbar-brand {
+float: left;
+padding: 15px 15px;
+line-height: 20px;
+height: 50px;
+}
+
+
+.navbar-default .nav li a {
+text-transform: uppercase;
+font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+font-weight: 400;
+letter-spacing: 1px;
+color: #fff;
+}
+
+.navbar-default .nav li a:hover, .navbar-default .nav li a:focus {
+outline: 0;
+color: #fed136;
+}
+
+.navbar-default .navbar-brand {
+font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+color: #fed136;
+transition: all .3s;
+}
+
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+max-height: 340px;
+}
+
+body {
+font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 14px;
+line-height: 1.428571429;
+color: #333333;
+}
+
+.navbar-default.navbar-shrink {
+padding: 10px 0;
+background-color: #222;
+border: 0;
+-webkit-transition: padding .3s;
+transition: padding .3s;
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+position: fixed;
+right: 0;
+left: 0;
+z-index: 1030;
+-webkit-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+}
+
+*{box-sizing: border-box;}
+
+.container {
+width: 1170px;
+}
