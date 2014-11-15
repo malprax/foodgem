@@ -1,109 +1,20 @@
-<%= form_for(@subscribe) do |f| %>
-  <% if @subscribe.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@subscribe.errors.count, "error") %> prohibited this subscribe from being saved:</h2>
+  <%= render :partial => 'error_subscribe' %>
 
-      <ul>
-      <% @subscribe.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :preference %><br>
-    <%= f.text_field :preference %>
-  </div>
-  <div class="field">
-    <%= f.label :zip %><br>
-    <%= f.text_field :zip %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :lunch_day %><br>
-    <%= f.text_field :lunch_day %>
-  </div>
-  <div class="field">
-    <%= f.label :lunch_time %><br>
-    <%= f.text_field :lunch_time %>
-  </div>
-  <div class="field">
-    <%= f.label :dinner_day %><br>
-    <%= f.text_field :dinner_day %>
-  </div>
-  <div class="field">
-    <%= f.label :dinner_time %><br>
-    <%= f.text_field :dinner_time %>
-  </div>
-  <div class="field">
-    <%= f.label :extra_note %><br>
-    <%= f.text_field :extra_note %>
-  </div>
-  <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :street_address %><br>
-    <%= f.text_field :street_address %>
-  </div>
-  <div class="field">
-    <%= f.label :apt %><br>
-    <%= f.text_field :apt %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :newyork %><br>
-    <%= f.text_field :newyork %>
-  </div>
-  <div class="field">
-    <%= f.label :zip %><br>
-    <%= f.text_field :zip %>
-  </div>
-  <div class="field">
-    <%= f.label :phone_delivery %><br>
-    <%= f.text_field :phone_delivery %>
-  </div>
-  <div class="field">
-    <%= f.label :email_delivery %><br>
-    <%= f.text_field :email_delivery %>
-  </div>
-  <div class="field">
-    <%= f.label :paypal %><br>
-    <%= f.text_field :paypal %>
-  </div>
-  <div class="field">
-    <%= f.label :foodgembox_price %><br>
-    <%= f.text_field :foodgembox_price %>
-  </div>
-  <div class="field">
-    <%= f.label :tax_price %><br>
-    <%= f.text_field :tax_price %>
-  </div>
-  <div class="field">
-    <%= f.label :tip_price %><br>
-    <%= f.text_field :tip_price %>
-  </div>
-  <div class="field">
-    <%= f.label :total_price %><br>
-    <%= f.text_field :total_price %>
-  </div>
-  <div class="field">
-    <%= f.label :coupun_code %><br>
-    <%= f.text_field :coupun_code %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= form_for build_subscribe(@subscribe) do |f| %>
+    <% unless params[:all] %>
+        <%= f.hidden_field :current_step, value: @subscribe.current_step %>
+        <%= render "subscribes/steps/page#{@subscribe.current_step + 1}", f: f %>
+        <div class="field">
+          <%= f.submit "Back", name: "back_button" unless @subscribe.first_step? %>
+          <%= f.submit @subscribe.last_step? ? nil: "Next" %>
+        </div>
+    <% else %>
+        <%= hidden_field_tag :all, 1 %>
+        <% Subscribe.total_steps.times do |step| %>
+          <%= render "subscribes/steps/page#{step + 1}", f: f %>
+        <% end %>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+    <% end %>
 <% end %>

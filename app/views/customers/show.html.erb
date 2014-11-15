@@ -108,25 +108,31 @@
 
     
     <h4><p> Upcoming meal:
-        <% if @subscription.upcoming_meal.blank? %> <em>Undetermined yet</em>
-        <% else %><%= @subscription.upcoming_meal %>
-        <% end %>
+        <!-- <%# if @subscription.upcoming_meal.blank? %> <em>Undetermined yet</em> -->
+        <%# else %><%#= @subscription.upcoming_meal %>
+        <%# end %>
+        
+        <%# if @subscribe.upcoming_meal.blank? %> <em>Undetermined yet</em>
+        <%# else %><%#= @subscribes.upcoming_meal %>
+        <%# end %>
+        
     </p></h4>
 
-    <h3> Your subscription </h3>
+    <!-- <h3> Your subscription </h3> -->
+    <h3> Your subscribe</h3>
 
     
 
-    <% if @subscription %>
+    <%# if @subscription %>
+    <% if @subscribe %>
         <p> Preferred tracks: 
           
-          <% if @preferences.empty? %>
+          <%# if @preferences.empty? %>
           <em> Unset yet </em>
-          <% else %>
-              <% @preferences.each do |pref| %>
-                <%= pref.track %>,
-              <% end %>
-            <% end %>
+          <%# else %>
+              <%# @preferences.each do |pref| %>
+                <%#= pref.track %>,
+              <%# end %>
         </p>
         <p> Lunches: 
             <% if @lunches.blank? %> <em>None ordered</em>
@@ -149,13 +155,14 @@
         </p>
 
         <p> Extra Notes:
-            <% if @extra_notes.blank? %> <em>No notes</em>
+            <% if @extra_note.blank? %> <em>No notes</em>
             <% else %>
-                <%= @extra_notes %>
+                <%= @extra_note %>                <%#= @extra_notes %>
             <% end %>
         </p>
         
-    <%= link_to "Edit subscription", edit_subscription_path(@subscription) %>
+    <%#= link_to "Edit subscription", edit_subscription_path(@subscription) %>
+    <%= link_to "Edit subscribe", edit_subscribe_path(@subscribe) %>
     <% else %>
     <em>No subscription data</em>
     <% end %>

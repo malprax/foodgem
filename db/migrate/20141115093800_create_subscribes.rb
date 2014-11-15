@@ -1,6 +1,7 @@
 class CreateSubscribes < ActiveRecord::Migration
   def change
     create_table :subscribes do |t|
+      t.references :customer, index: true
       t.string :preference
       t.string :zip
       t.string :email

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141115035153) do
+ActiveRecord::Schema.define(version: 20141115093800) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -92,6 +92,7 @@ ActiveRecord::Schema.define(version: 20141115035153) do
   add_index "preferences", ["track_id"], name: "index_preferences_on_track_id"
 
   create_table "subscribes", force: true do |t|
+    t.integer  "customer_id"
     t.string   "preference"
     t.string   "zip"
     t.string   "email"
@@ -117,6 +118,8 @@ ActiveRecord::Schema.define(version: 20141115035153) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "subscribes", ["customer_id"], name: "index_subscribes_on_customer_id"
 
   create_table "subscriptions", force: true do |t|
     t.integer  "customer_id"
