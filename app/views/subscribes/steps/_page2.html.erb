@@ -1,3 +1,4 @@
+
   <h3>Choose Your Area</h3>
   <div class="field">
     <%= f.label :zip %><br>
@@ -11,3 +12,26 @@
     <%= f.label :phone %><br>
     <%= f.text_field :phone %>
   </div>
+  
+  <div class="quantity">
+      <%#= f.range_field :order_quantity, :in => 1..10, :value => 1%>      
+      
+       <!-- <span class="badge badge-warning"><text id="order_quantity">1</text></span>
+     --></div>
+    
+    
+    <!-- $(document).ready(function(){
+      $("#order_page_order_quantity").change(function () {
+         var newValue = $('#order_page_order_quantity').val();
+         $("#order_quantity").html(newValue);
+      });
+    });
+
+
+    $(document).on("click", "input[id=order_page_spread_ids_]", function(e) {
+       var num_checked = $("input[id=order_page_spread_ids_]:checked").length;
+       if (num_checked > 1) {
+         alert("sorry, you have already selected 1 spread!, max only 1");
+         $(e.target).prop('checked', false);
+       }
+    }); -->
