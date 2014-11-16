@@ -76,6 +76,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    commonjs (0.2.7)
     devise (3.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -113,6 +114,11 @@ GEM
     kaminari (0.16.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    less (2.6.0)
+      commonjs (~> 0.2.7)
+    less-rails (2.6.0)
+      actionpack (>= 3.1)
+      less (~> 2.6.0)
     libv8 (3.16.14.7)
     mail (2.6.1)
       mime-types (>= 1.16, < 3)
@@ -214,6 +220,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   kaminari
+  less-rails
   mandrill-api
   pg
   quiet_assets
