@@ -71,6 +71,10 @@ ruby "2.1.2"
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+#check_error compile
+gem 'non-stupid-digest-assets', '~> 1.0.4'
+
+
 
 
 
