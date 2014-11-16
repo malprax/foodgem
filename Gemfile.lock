@@ -91,6 +91,8 @@ GEM
       less-rails (>= 2.4.2)
     font-awesome-rails (4.2.0.0)
       railties (>= 3.2, < 5.0)
+    font-awesome-sass (4.2.2)
+      sass (~> 3.2)
     formtastic (3.0.0)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.1.1)
@@ -220,6 +222,7 @@ DEPENDENCIES
   devise
   font-awesome-less
   font-awesome-rails
+  font-awesome-sass
   jbuilder (~> 2.0)
   jquery-rails
   jquery-ui-rails

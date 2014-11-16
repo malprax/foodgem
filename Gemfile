@@ -77,6 +77,8 @@ gem 'non-stupid-digest-assets', '~> 1.0.4'
 #to use font-awesome-less
 gem 'font-awesome-less'
 
+#to use font-awesome-sass
+gem 'font-awesome-sass'
 
 
 
