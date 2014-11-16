@@ -29,10 +29,6 @@ letter-spacing: 1px;
 color: #fff;
 }
 
-.navbar-default .nav li a:hover, .navbar-default .nav li a:focus {
-outline: 0;
-color: #fed136;
-}
 
 .navbar-default .navbar-brand {
 font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
@@ -43,6 +39,13 @@ transition: all .3s;
 .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
 max-height: 340px;
 }
+
+::selection{
+  text-shadow: none;
+  background: #fed136;
+}
+
+
 
 body {
 font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -73,3 +76,106 @@ transform: translate3d(0, 0, 0);
 .container {
 width: 1170px;
 }
+
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: #fed136;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #fed136;
+	background-color: #75ab87;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+	color: #fed136;
+	background-color: #75ab87;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+	color: #fed136;
+}
+
+.btn-primary {
+border-color: #fed136;
+text-transform: uppercase;
+font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+font-weight: 700;
+color: #fff;
+background-color: #fed136;
+}
+
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active
+{
+  background-color: #fed136;
+}
+
+.btn-primary:hover, .btn-primary:focus
+{
+  border-color: #f6bf01;
+  background-color: #fec503;
+}
+
+a {
+color: #fed136;
+text-decoration: none;
+}
+
+a:hover, a:focus {
+  border-color: #f6bf01;
+  background-color: #fec503;
+}
+
+.fa {
+display: inline-block;
+font: normal normal normal 14px/1 FontAwesome;
+font-size: inherit;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+footer span.copyright {
+text-transform: uppercase;
+text-transform: none;
+font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+line-height: 40px;
+text-align: center;
+}
+
+ul.social-buttons li a {
+display: block;
+width: 40px;
+height: 40px;
+border-radius: 100%;
+font-size: 20px;
+line-height: 40px;
+outline: 0;
+color: #fff;
+background-color: #222;
+-webkit-transition: all .3s;
+transition: all .3s;
+text-align: center;
+}
+
+ul.social-buttons li a:hover, ul.social-buttons li a:focus {
+background-color: #fed136;
+-webkit-transition: all .3s;
+transition: all .3s;
+text-align: center;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+text-transform: uppercase;
+font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+font-weight: 700;
+}
+
+footer {
+padding: 25px 0;
+text-align: center;
+}
+
+@import "font-awesome";
+
