@@ -74,6 +74,9 @@ ruby "2.1.2"
 #check_error compile
 gem 'non-stupid-digest-assets', '~> 1.0.4'
 
+#to use font-awesome-less
+gem 'font-awesome-less'
+
 
 
 
