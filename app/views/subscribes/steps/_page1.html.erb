@@ -259,9 +259,10 @@
       </section>
 
 
+  <li><h><img src="/images/frame1.png"></h></li>
+  <li><h><img src="/images/frame2.png"></h></li>
+  <li><h><img src="/images/frame3.png"></h></li>
   
-  <div class="field">
-    <%= f.label :preference %><br>
-    <%= f.text_field :preference %>
-  </div>
+  
+  <%= f.hidden_field :preference, :id => "frame", :name => "frame" %>
   
