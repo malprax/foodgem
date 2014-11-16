@@ -122,6 +122,10 @@ text-decoration: none;
 }
 
 a:hover, a:focus {
+  color: #f6bf01;
+}
+
+ul.social-buttons > li > a:hover, a:focus {
   border-color: #f6bf01;
   background-color: #fec503;
 }
