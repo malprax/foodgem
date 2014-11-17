@@ -1,7 +1,7 @@
 
   <h3>Choose Your Area</h3>
   <div class="field">
-    <%= f.label :zip %><br>
+    <%= f.label :zip, ['90222', '90245', '90221'] %><br>
     <%= f.text_field :zip %>
   </div>
   <div class="field">
@@ -21,9 +21,9 @@
     
     
     <!-- $(document).ready(function(){
-      $("#order_page_order_quantity").change(function () {
-         var newValue = $('#order_page_order_quantity').val();
-         $("#order_quantity").html(newValue);
+      $("#zip").on("click", function () {
+         var newValue = $('#zip').val();
+         $("#zip").html(newValue);
       });
     });
 
