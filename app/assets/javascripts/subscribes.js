@@ -164,11 +164,14 @@
 //
 //       </section>
 
-$(document).on('click', '.img-responsive', function() {
-    $('#subscribe_preference').val(jQuery(this).attr('data-value'));
-    $('#edit_subscribe_1').submit();
-  });
 
+
+// $('h img').click(function(){
+//   var imageId = $("img").attr("src");
+//   $('#subscribe_preference').val(imageId);
+//   $('.edit_subscribe').submit();
+//
+// });
 
 // jQuery ->
 //       $("h img").click(function() {
@@ -177,10 +180,10 @@ $(document).on('click', '.img-responsive', function() {
 //         $
 //     });
 
-// $(document).on('click', '.nama', function() {
-//     $('#student_name').val(jQuery(this).attr('data-value'));
-//     $('#new_student').submit();
-//   });
+$(document).on('click', '.portfolio-link', function() {
+    $('#subscribe_preference').val(jQuery(this).attr('data-value'));
+    $('.new_subscribe').submit();
+  });
 //
 //
 //   $("#zip").on("click", "input[id=zip]",function() {
