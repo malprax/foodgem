@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-  <div class="row">
+  <!-- <div class="row">
       <div class="goarea col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link selecttrack" data-toggle="modal">
               <div class="portfolio-hover">
@@ -140,19 +140,28 @@
 
 
   </div>
+   -->
   
   
-  <img src="http://s4.favim.com/orig/50/club-delicious-food-lunch-sanwich-Favim.com-460453.jpg" class="img-responsive" data-value="popular-track" alt="">
-   <img src="http://www.vegkitchen.com/wp-content/uploads/2012/08/Seitan-avocado-wrap.jpg" class="img-responsive" data-value="vegetarian-track"alt="">
-  <img src="http://julievr.wpengine.netdna-cdn.com/wp-content/uploads/2011/08/Simons-chickpea-dish.jpg" class="img-responsive" data-value="vegan-track" alt="">
-  <img src="http://www.abc.net.au/news/image/853746-3x2-940x627.jpg" class="img-responsive" data-value="meat lovers" alt="">
-   <img src="http://1.bp.blogspot.com/_0DNo0eySp-8/TSL7oN98tFI/AAAAAAAAAQE/6Y6M6fvxXqM/s400/sushi-india-japanese-cuisine.jpg" class="img-responsive" data-value="seafood track" alt="">
-   <img src="http://taylormarshall.com/wp-content/uploads/2013/12/Mexican-Food-for-Guadalupe.jpg" data-value="internaional-track" class="img-responsive" alt="">
+  <ul>
+    <li> <img src="http://s4.favim.com/orig/50/club-delicious-food-lunch-sanwich-Favim.com-460453.jpg" class="img-responsive" data-value="popular-track" alt=""></li>
+    <li><img src="http://www.vegkitchen.com/wp-content/uploads/2012/08/Seitan-avocado-wrap.jpg" class="img-responsive" data-value="vegetarian-track"alt=""></li>
+    <li><img src="http://julievr.wpengine.netdna-cdn.com/wp-content/uploads/2011/08/Simons-chickpea-dish.jpg" class="img-responsive" data-value="vegan-track" alt=""></li>
+    <li><img src="http://www.abc.net.au/news/image/853746-3x2-940x627.jpg" class="img-responsive" data-value="meat lovers" alt=""></li>
+    <li><img src="http://1.bp.blogspot.com/_0DNo0eySp-8/TSL7oN98tFI/AAAAAAAAAQE/6Y6M6fvxXqM/s400/sushi-india-japanese-cuisine.jpg" class="img-responsive" data-value="seafood track" alt=""></li>
+    <li><img src="http://taylormarshall.com/wp-content/uploads/2013/12/Mexican-Food-for-Guadalupe.jpg" data-value="internaional-track" class="img-responsive" alt=""></li>
+  </ul>
+ 
+   
+  
+  
+   
+   
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%#= f.label :name %><br>
+    <%= f.hidden_field :name %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%#= f.submit %>
   </div>
 <% end %>
