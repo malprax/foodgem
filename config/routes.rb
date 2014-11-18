@@ -2,8 +2,6 @@ Rails.application.routes.draw do
 
 
 
-  resources :foods
-
   resources :subscribes
 
   get 'management', to: redirect('management/subscription')
