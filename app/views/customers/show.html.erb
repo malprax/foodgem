@@ -108,31 +108,32 @@
 
     
     <h4><p> Upcoming meal:
-        <!-- <%# if @subscription.upcoming_meal.blank? %> <em>Undetermined yet</em> -->
-        <%# else %><%#= @subscription.upcoming_meal %>
-        <%# end %>
+        <% if @subscription.upcoming_meal.blank? %> <em>Undetermined yet</em>
+        <% else %><%= @subscription.upcoming_meal %>
+        <% end %>
         
-        <%# if @subscribe.upcoming_meal.blank? %> <em>Undetermined yet</em>
-        <%# else %><%#= @subscribes.upcoming_meal %>
-        <%# end %>
+        <% if @subscribe.upcoming_meal.blank? %> <em>Undetermined yet</em>
+        <% else %><%= @subscribes.upcoming_meal %>
+        <% end %>
         
     </p></h4>
 
-    <!-- <h3> Your subscription </h3> -->
-    <h3> Your subscribe</h3>
+    <h3> Your subscription </h3>
+    <!-- <h3> Your subscribe</h3> -->
 
     
 
-    <%# if @subscription %>
-    <% if @subscribe %>
+    <% if @subscription %>
+    <%# if @subscribe %>
         <p> Preferred tracks: 
           
-          <%# if @preferences.empty? %>
+          <% if @preferences.empty? %>
           <em> Unset yet </em>
-          <%# else %>
-              <%# @preferences.each do |pref| %>
-                <%#= pref.track %>,
-              <%# end %>
+          <% else %>
+              <% @preferences.each do |pref| %>
+                <%= pref.track %>,
+              <% end %>
+          <% end %>
         </p>
         <p> Lunches: 
             <% if @lunches.blank? %> <em>None ordered</em>
@@ -157,14 +158,14 @@
         <p> Extra Notes:
             <% if @extra_note.blank? %> <em>No notes</em>
             <% else %>
-                <%= @extra_note %>                <%#= @extra_notes %>
+                <%= @extra_notes %>                <%#= @extra_note %>
             <% end %>
         </p>
         
-    <%#= link_to "Edit subscription", edit_subscription_path(@subscription) %>
-    <%= link_to "Edit subscribe", edit_subscribe_path(@subscribe) %>
+    <%= link_to "Edit subscription", edit_subscription_path(@subscription) %>
+    <%#= link_to "Edit subscribe", edit_subscribe_path(@subscribe) %>
     <% else %>
-    <em>No subscription data</em>
+      <em>No subscription data</em>
     <% end %>
 
     <h3> Delivery address </h3> 
@@ -173,23 +174,23 @@
       <i class="fa fa-phone"></i>
       <% if @phone.blank? %>
         <em> Unprovided </em> &nbsp &nbsp
-    <% else %>
-      <%= " #{@phone}"  %> &nbsp &nbsp
-    <% end %>
-    <i class="fa fa-envelope"></i>
-    <% if @address.email.blank? %>
+      <% else %>
+        <%= " #{@phone}"  %> &nbsp &nbsp
+      <% end %>
+      <i class="fa fa-envelope"></i>
+      <% if @address.email.blank? %>
         <em> Unprovided </em>
-    <% else %>
-      <%= " #{@address.email}"  %>
-    <% end %><br><br>
+      <% else %>
+        <%= " #{@address.email}"  %>
+      <% end %><br><br>
       <%= "#{@address.street_address} #{@address.suite}" %><br>
       <%= "#{@address.city} #{@address.state} #{@address.zip}" %><br>
       <%= link_to "Edit address", edit_address_path(@address) %>
     <% else %>
       <em> No address defined </em><br><br>
       <%= link_to "Edit address", new_address_path %>
-
     <% end %>
+  
 
     
   </div>

@@ -26,13 +26,13 @@ class Customers::RegistrationsController < Devise::RegistrationsController
       mandrill = Mandrill::API.new '7RZIKxnlpNkJrGW8sN5Utw'
 
       if @address.save
-        subscribe = Subscribe.new()
-        subscribe.customer_id = id
-        subscribe.save
-        
-        # subscription = Subscription.new()
-#         subscription.customer_id = id
-#         subscription.save
+        # subscribe = Subscribe.new()
+#         subscribe.customer_id = id
+#         subscribe.save
+#
+        subscription = Subscription.new()
+        subscription.customer_id = id
+        subscription.save
 
         message = {"html" =>"<p> Congratulations! <br><br>
 
