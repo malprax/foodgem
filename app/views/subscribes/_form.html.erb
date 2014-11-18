@@ -1,6 +1,6 @@
   <%= render :partial => 'error_subscribe' %>
 
-<%= form_for build_subscribe(@subscribe) do |f| %>
+<%= form_for build_subscribe(@subscribe), html:{remote:true} do |f| %>
     <% unless params[:all] %>
         <%= f.hidden_field :current_step, value: @subscribe.current_step %>
         <%= render "subscribes/steps/page#{@subscribe.current_step + 1}", f: f %>
