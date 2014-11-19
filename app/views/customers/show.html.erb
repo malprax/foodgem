@@ -112,9 +112,9 @@
         <% else %><%= @subscription.upcoming_meal %>
         <% end %>
         
-        <% if @subscribe.upcoming_meal.blank? %> <em>Undetermined yet</em>
-        <% else %><%= @subscribes.upcoming_meal %>
-        <% end %>
+        <!-- <%# if @subscribe.upcoming_meal.blank? %> <em>Undetermined yet</em>
+        <%# else %><%#= @subscribes.upcoming_meal %>
+        <%# end %> -->
         
     </p></h4>
 
@@ -156,7 +156,7 @@
         </p>
 
         <p> Extra Notes:
-            <% if @extra_note.blank? %> <em>No notes</em>
+            <% if @extra_notes.blank? %> <em>No notes</em>
             <% else %>
                 <%= @extra_notes %>                <%#= @extra_note %>
             <% end %>

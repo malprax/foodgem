@@ -2,31 +2,6 @@ class ManagementController < ApplicationController
   before_action :authenticate_admin_user!
 
   DAYS = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
-  # def subscribe
-#     @query = params[:q]
-#
-#     unless @query.blank?
-#       @customer = Customer.find_by_email(@query)
-#       if @customer
-#         @subscribe = Subscribe.find_by_customer_id(@customer.id)
-#         if @subscribe
-#           @preferences = @subscribe.preferences
-#           @lunches = @subscribe.lunch
-#           @dinners = @subscribe.dinner
-#           @extra_notes = @subscribe.extra_notes
-#           @upcoming_meal = @subscribe.upcoming_meal
-#           @lunch_time = @subscribe.lunch_time ? @subscribe.lunch_time.strftime('%H,%M') : "default time"
-#           @dinner_time = @subscribe.dinner_time ? @subscribe.dinner_time.strftime('%H,%M') : "default time"
-#         end
-#       end
-#     else
-#       @customers = Customer.page(params[:page]).per(25)
-#
-#     end
-#
-#   end
-#
-  
   
   def subscription
     @query = params[:q]
@@ -119,9 +94,9 @@ class ManagementController < ApplicationController
     def subscription_params
       params.require(:subscription).permit(:lunch_time, :dinner_time, :extra_notes)
     end
+    
     def meal_params
-      params.require(:subscription).permit(:upcoming_meal)
-      
+      params.require(:subscription).permit(:upcoming_meal)  
     end
 
     def customer_params

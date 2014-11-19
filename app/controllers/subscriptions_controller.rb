@@ -53,7 +53,7 @@ class SubscriptionsController < ApplicationController
     end
 
     def subscription_params
-      params.require(:subscription).permit(:lunch_time, :dinner_time, :extra_notes)
+      params.require(:subscription).permit(:lunch_time, :dinner_time, :extra_notes, :upcoming_meal)
     end
 
 
